@@ -18,7 +18,6 @@ public record CourseService(CourseRepository courseRepository) {
 //        TODO: Check if email exists
 //        TODO: Check if email is valid
 
-
         courseRepository.save(course);
     }
 
@@ -29,4 +28,6 @@ public record CourseService(CourseRepository courseRepository) {
     public Course getCourseById(int id) {
         return courseRepository.findById(id).orElse(null);
     }
+
+
 }
