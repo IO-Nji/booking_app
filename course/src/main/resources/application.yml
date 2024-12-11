@@ -1,0 +1,18 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: course
+  datasource:
+    url: jdbc:mysql://localhost:3306/booking_app
+    username: root
+    password: 1011ADmysql!
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
