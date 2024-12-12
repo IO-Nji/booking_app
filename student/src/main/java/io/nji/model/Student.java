@@ -1,10 +1,7 @@
 package io.nji.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @Builder
@@ -12,10 +9,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Table(name = "students")
+@Getter
+@Setter
 public class Student {
     @Id
     @SequenceGenerator(
-            name ="student_id_sequence",
+            name = "student_id_sequence",
             sequenceName = "student_id_sequence")
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
